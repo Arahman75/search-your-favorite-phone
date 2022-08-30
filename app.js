@@ -45,14 +45,17 @@ fetch(url)
 }
 const displayPhoneDetail =(phoneDetail)=>{
     const detailContainer = document.getElementById('phone-detail');
+    detailContainer.textContent = '';
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
     <img src="${phoneDetail.image}" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">${phoneDetail.releaseDate ? phoneDetail.releaseDate : 'ReleaseDate is not found.'}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h2 class="card-title">ReleaseDate: ${phoneDetail.releaseDate ? phoneDetail.releaseDate : 'ReleaseDate is not found.'}</h2>
+      <h3 class="card-title">ChipSet: ${phoneDetail.mainFeatures.chipSet}</h3>
+      <h4 class="card-title">Memory: ${phoneDetail.mainFeatures.memory}</h4>
+      <h4 class="card-title">Sensors: ${phoneDetail.mainFeatures.sensors}</h4>
+      
     </div>
     `;
     detailContainer.appendChild(div);
