@@ -5,3 +5,28 @@ body{
 font-family: 'Poppins', sans-serif;
 font-family: 'Work Sans', sans-serif;
 }
+section{
+    padding: 10px 20px;
+}
+section img{
+height: 500px;
+
+}
+section .card-button{
+outline: none;
+background-color: rgb(245, 10, 10);
+border: none;
+border-radius: 30px;
+color: white;
+font-weight: bold;
+padding: 10px 20px;
+}
+#spinner{
+margin: auto;
+margin-left: 600px;
+display: none;
+}
+
+/* #error-message{
+    display: none;
+} */
